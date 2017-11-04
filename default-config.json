@@ -1,0 +1,10 @@
+{
+  "windowBounds": {
+    "x": null, "y": null, "width": 1000, "height": 600
+  },
+  "uiTheme": "Default",
+  "highlightTheme": "tomorrow",
+  "renderTheme": "GitHub",
+  "renderDelay": 500,
+  "tabSize": 4
+}

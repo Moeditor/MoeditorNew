@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Moeditor</title>
+    <script>
+    require('babel-register');
+    require('babel-polyfill');
+    </script>
+
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #root {
+      width: 100%;
+      height: 100%;
+    }
+
+    #electron-titlebar .button {
+      z-index: 100;
+    }
+    </style>
+
+    <!-- Built-in fonts CSS -->
+    <link rel="stylesheet" href="../assets/fonts/fonts.css">
+
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
+    <!-- Lodash -->
+    <script src="../node_modules/lodash/lodash.js"></script>
+
+    <!-- Mathjax config -->
+    <script src="../node_modules/mathjax/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+    <script type="text/x-mathjax-config">
+    window.MathJax.Hub.Config({
+      showMathMenu: false,
+      tex2jax: {
+        preview: 'none',
+        inlineMath: [ ['$', '$'] ],
+        processEscapes: true
+      },
+      messageStyle: 'none',
+      'fast-preview': {
+        disabled: true
+      }
+    });
+    </script>
+  </head>
+
+  <body>
+    <div id="electron-titlebar" class="inset drag"></div>
+    <div id="root"></div>
+
+    <script>
+    if (process.env.HOT) {
+      let script = document.createElement('script');
+      let port = process.env.PORT || 9212;
+      script.src = (process.env.HOT)
+        ? 'http://localhost:' + port + '/dist/bundle.js'
+        : './bundle/bundle.js';
+      document.body.appendChild(script);
+    } else {
+      require('./index.js');
+    }
+    </script>
+  </body>
+</html>

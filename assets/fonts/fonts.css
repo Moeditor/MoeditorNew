@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Raleway Thin';
+    src: url(Raleway-Thin.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Regular';
+    src: url(Raleway-Regular.ttf) format('truetype');
+}

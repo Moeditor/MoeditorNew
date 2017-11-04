@@ -1,0 +1,20 @@
+@import "editor";
+
+// Scroll bars
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: none;
+    visibility: hidden;
+    // background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #b8b8b8;
+}
+
+// Selections
+::selection {
+    background: #e0e0e0;
+}

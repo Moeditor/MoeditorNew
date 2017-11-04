@@ -1,0 +1,90 @@
+{
+  "name": "Moeditor",
+  "version": "0.3.0",
+  "versionInfo": "Beta",
+  "description": "Your all-purpose markdown editor",
+  "main": "bootstrap.js",
+  "links": {
+    "github": "https://github.com/Moeditor/Moeditor",
+    "website": "https://moeditor.org",
+    "issues": "https://github.com/Moeditor/Moeditor/issues",
+    "twitter": "https://twitter.com/MoeditorApp",
+    "contributors": "https://github.com/Moeditor/Moeditor/graphs/contributors"
+  },
+  "scripts": {
+    "hot-server": "cross-env NODE_ENV=development node --max_old_space_size=2096 -r babel-register server.js",
+    "build-main": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.electron.js --progress --profile --colors",
+    "build-renderer": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.production.js --progress --profile --colors",
+    "build": "npm run build-main && npm run build-renderer",
+    "start-prod": "cross-env NODE_ENV=production electron ./app/",
+    "start-hot": "cross-env HOT=1 NODE_ENV=development electron -r babel-register -r babel-polyfill ./main.js",
+    "postinstall": "concurrently \"install-app-deps\" \"node node_modules/fbjs-scripts/node/check-dev-engines.js package.json\"",
+    "dev": "npm run hot-server -- --start-hot",
+    "package": "npm run build && build --publish never",
+    "package-win": "npm run build && build --win --x64",
+    "package-linux": "npm run build && build --linux",
+    "package-all": "npm run build && build -mwl",
+    "start": "electron . --unpacked"
+  },
+  "repository": {
+    "url": "https://github.com/Moeditor/Moeditor.git",
+    "type": "git"
+  },
+  "author": "Menci",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "codemirror": "^5.23.0",
+    "electron": "^1.4.15",
+    "electron-titlebar": "^0.0.3",
+    "escape-html": "^1.0.3",
+    "font-awesome": "^4.7.0",
+    "googlediff": "^0.1.0",
+    "highlight.js": "^9.9.0",
+    "jquery": "^3.1.1",
+    "js-yaml": "^3.7.0",
+    "lodash": "^4.17.4",
+    "lru-cache": "^4.0.2",
+    "markdown-it": "^8.2.2",
+    "markdown-it-math": "^4.0.1",
+    "mathjax": "^2.7.0",
+    "node-sass": "^4.3.0",
+    "prismjs": "^1.6.0",
+    "radium": "^0.18.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "sass-loader": "^4.1.1",
+    "velocity-animate": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "electron-devtools-installer": "^2.0.1"
+  },
+  "standard": {
+    "globals": [
+      "_",
+      "app"
+    ]
+  },
+  "_devDependencies": {
+    "babel-loader": "^6.2.10",
+    "babel-plugin-react-css-modules": "^2.2.0",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.26.0",
+    "json-loader": "^0.5.4",
+    "semistandard": "^9.2.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-merge": "^2.4.0",
+    "webpack-validator": "^2.3.0"
+  }
+}

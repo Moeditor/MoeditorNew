@@ -1,0 +1,244 @@
+vars:
+    editor-font: &editor-font "'Roboto Mono', 'Ubuntu Mono', 'Bistream Vera Sans Mono', Menlo, Consolas, 'Lucida Console', monospace"
+    ui-font: &ui-font "Roboto, Ubuntu, 'San Francisco', Helvativa, 'Segoe UI', Arial, sans-serif"
+
+icon:
+    bottomPanel:
+        menu: bars
+        focus-mode: dot-circle-o
+        mode: eye
+    menu:
+        open: folder-open
+        save: floppy-o
+        save-as: files-o
+        export: file-text
+        settings: cog
+        about: info
+        back: arrow-left
+    menuView:
+        open:
+            open: folder-open
+            file: file
+        export:
+            export: file-text
+            pdf: file-pdf-o
+            html: file-code-o
+        settings:
+            general: cog
+            editor: pencil-square-o
+            render: magic
+        about:
+            github: github
+            website: home
+            issue: bug
+            twitter: twitter
+
+editor:
+    background: "#efefef"
+    color: "#111"
+    font-size: "14px"
+    font-family: *editor-font
+    line-height: 2
+    padding: 40px 40px 50% 40px
+    width: calc(100% - 40px * 2)
+
+preview:
+    background: "#ffffff"
+    margin: 0 -10px 0 0
+
+bottomPanel:
+    border: "1px solid rgba(128, 128, 128, 0.3)"
+    button:
+        transition: all 50ms linear
+        color: "#b3b3b3"
+        size: 14px
+        margin: 4px 5px 0 5px
+        hover:
+            color: "#cecece"
+        active:
+            color: "#dcdcdc"
+
+menu:
+    font-family: *ui-font
+    font-size: '12.5px'
+    background: '#33383c'
+    color: '#bbb'
+    item:
+        space-after-icon: 10px
+        icon-size: 13px
+        height: '45px'
+        padding: '0 0 0 20px'
+        transition: all 50ms linear
+        hover:
+            background: '#42474b'
+        active:
+            background: '#4a4e52'
+        selected:
+            background: '#3e4347'
+    divider:
+        height: '15px'
+        border: '1px solid rgb(63, 69, 74)'
+
+menuView:
+    panel:
+        width: calc(100% - 30px - 30px)
+        height: calc(100% - 25px - 10px)
+        padding: '25px 30px 10px 30px'
+        background: '#f9f9f9'
+        scrollbar-width: 10px
+        section:
+            title:
+                font-size: 20px
+                font-family: *ui-font
+                color: '#444'
+                margin: 15px 0 25px 0
+                icon-size: 20px
+                space-after-icon: 9px
+
+settings:
+    item:
+        height: 40px
+        label:
+            width: 40%
+            max-width: 200px
+            color: '#666'
+            font-size: 13px
+            font-family: *ui-font
+        control:
+            width: 60%
+
+about:
+    top: calc(50% - 7.5px)
+    icon:
+        size: 200px
+    link:
+        color: '#538aad'
+        text-shadow: none
+    appName:
+        font-size: 60px
+        color: '#000'
+        letter-spacing: 10px
+        margin: 25px 0 5px 5px
+    description:
+        font-size: 15px
+        color: '#888'
+        text-shadow: '0 0 1px #ddd'
+        letter-spacing: 0.5px
+        margin: 0 0 0 0.6px
+    buttons:
+        margin: 30px 0 0 0
+    author:
+        letter-spacing: 0.5px
+        margin: 10px 0px 8px 0.25px
+        font-size: 17px
+        color: '#444'
+        text-shadow: '0 0 1px #ccc'
+    version:
+        letter-spacing: 0.5px
+        margin: 0 0 0 0.25px
+        color: '#999'
+        font-size: 14px
+
+components:
+    button:
+        color: '#666'
+        background: '#e8e8e8'
+        font-family: *ui-font
+        border: '1px solid #ccc'
+        icon-size: 15px
+        transition: all 50ms linear
+        hover:
+            background: '#ddd'
+            color: '#333'
+            border: '1px solid #999'
+        active:
+            background: '#c7c7c7'
+            color: '#333'
+            border: '1px solid #999'
+        # Sizes
+        large:
+            padding: 15px 20px 15px 20px
+            space-after-icon: 8px
+            spacing-x: 20px
+            spacing-y: 20px
+            font-size: 12.5px
+            min-width: 80px
+        medium:
+            padding: 10px 15px 10px 15px
+            space-after-icon: 4px
+            spacing-x: 15px
+            spacing-y: 15px
+            font-size: 12.5px
+            min-width: 70px
+
+    select:
+        min-width: 200px
+        color: '#666'
+        background: '#f2f2f2'
+        font-size: 13px
+        font-family: *ui-font
+        padding: 3px 5px 3px 5px
+        border: '1px solid #ccc'
+        transition: all 50ms linear
+        spacing-x: 20px
+        spacing-y: 20px
+        hover:
+            background: '#eee'
+            color: '#333'
+            border: '1px solid #adadad'
+        active:
+            background: '#eee'
+            color: '#333'
+            border: '1px solid #adadad'
+
+    edit:
+        min-width: 200px
+        color: '#666'
+        background: '#f2f2f2'
+        font-size: 13px
+        font-family: *ui-font
+        padding: 5px 4px 3px 6px
+        border: '1px solid #ccc'
+        transition: all 50ms linear
+        spacing-x: 20px
+        spacing-y: 20px
+        hover:
+            background: '#eee'
+            color: '#333'
+            border: '1px solid #adadad'
+        active:
+            background: '#eee'
+            color: '#333'
+            border: '1px solid #adadad'
+
+    checkbox:
+        min-width: 200px
+        color: '#999'
+        padding: 0
+        font-size: 13px
+        font-family: *ui-font
+        transition: all 50ms linear
+        spacing-x: 20px
+        spacing-y: 20px
+        icon-size: 12px
+        space-after-icon: 8px
+        icon:
+            padding: 2.5px
+            color: '#777'
+            border: '1px solid #dadada'
+            background: '#f3f3f3'
+            hover:
+                background: '#eaeaea'
+                border: '1px solid #d9d9d9'
+            active:
+                background: '#e7e7e7'
+                border: '1px solid #d2d2d2'
+            checked:
+                background: '#efefef'
+                border: '1px solid #ddd'
+        hover:
+            color: '#333'
+        active:
+            color: '#333'
+        checked:
+            color: '#666'

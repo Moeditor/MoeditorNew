@@ -1,0 +1,175 @@
+.m-editor-content {
+    background: #efefef;
+    color: #202020;
+
+    /* Highlighting */
+    .pre * {
+        font-size: inherit !important;
+    }
+
+    .tag {
+        color: #555;
+        font-weight: bold;
+        font-family: Courier, monospace;
+        font-size: 1em;
+    }
+
+    .tag .punctuation,
+    .tag .attr-value,
+    .tag .attr-name {
+        font-weight: normal;
+    }
+
+    .latex,
+    .math {
+        color: #555;
+    }
+
+    .entity {
+        font-style: italic;
+        font-family: Courier, monospace;
+        font-size: 1em;
+        color: #555;
+    }
+
+    .table {
+        font-family: Courier, monospace;
+        font-size: 1em;
+    }
+
+    .table * {
+        font-size: inherit;
+    }
+
+    .comment {
+        color: rgba(85, 85, 85, 0.6);
+    }
+
+    .keyword {
+        color: #3f3f3f;
+        font-weight: bold;
+    }
+
+    .code,
+    .img,
+    .imgref,
+    .cl-toc {
+        background-color: #eee;
+        border-radius: 4px;
+        padding: 0.15em 0;
+    }
+
+    .cl-toc {
+        font-size: 2.8em;
+        padding: 0.15em;
+    }
+
+    .blockquote {
+        font-weight: 300;
+    }
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-weight: bolder;
+    }
+
+    .h1,
+    .h11 {
+        font-size: 2em;
+    }
+
+    .h2,
+    .h22 {
+        font-size: 1.7em;
+    }
+
+    .h3 {
+        font-size: 1.3em;
+    }
+
+    .h4 {
+        font-size: 1.15em;
+    }
+
+    .h5 {
+        font-size: 1.05em;
+    }
+
+    .h6 {
+        font-size: 1em;
+    }
+
+    .cl-hash {
+        color: rgba(85, 85, 85, 0.6);
+    }
+
+    .cl,
+    .hr {
+        color: rgba(85, 85, 85, 0.6);
+        font-style: normal;
+        font-weight: normal
+    }
+
+    .em,
+    .em .cl {
+        font-style: italic;
+    }
+
+    .strong,
+    .strong .cl,
+    .term {
+        font-weight: bold;
+    }
+
+    .cl-del-text {
+        text-decoration: line-through
+    }
+
+    .url,
+    .email,
+    .cl-underlined-text {
+        text-decoration: underline;
+    }
+
+    .linkdef .url {
+        color: rgba(85, 85, 85, 0.6);
+    }
+
+    .fn,
+    .inlinefn,
+    .sup {
+        position: relative;
+        top: -0.5em;
+        font-size: smaller;
+    }
+
+    .sub {
+        position: relative;
+        bottom: -0.25em;
+        font-size: smaller;
+    }
+
+    .img {
+        display: inline-block;
+    }
+
+    .img,
+    .imgref,
+    .link,
+    .linkref {
+        color: rgba(85, 85, 85, 0.6);
+    }
+
+    .img .cl-underlined-text,
+    .link .cl-underlined-text {
+        color: #2f2f2f;
+    }
+
+    .cl-title {
+        color: #555;
+    }
+}
